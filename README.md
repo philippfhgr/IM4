@@ -5,4 +5,7 @@
     Aufsetzen HTML und erste CSS arbeiten
 <break>
 18. Mai
-    Weiter optimieren. Button für automatische Bewässerung, Footer, CSS
+    Weiter optimiert. Button für automatische Bewässerung, Footer, CSS
+<break>
+18. Mai
+    HTML + CSS grundsätzlich fertiggestellt. Vorbereitungen für Datenbankverlinkung getroffen.
