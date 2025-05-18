@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Grüner Daumen KIDS</title>
+  <title>Grüner Daumen 🌱 KIDS</title>
 </head>
 
 <body>
   <header>
-    <img src="/img/AdobeStock_175956693 1.png" alt="Grüner Daumen KIDS Logo" style="width: auto; height: auto;">
+    <div class="topimg"> <img src="/img/AdobeStock_175956693 1.png" alt="Grüner Daumen KIDS Logo"> </div>
+    <h3>Grüner Daumen <i>KIDS</i></h3>
     <h1>Wie geht es deinen Pflanzen?</h1>
   </header>
-  <div class="flex-container">
+  <div class="flexcontainer">
     <div class="proTag">
-      <canvas id="proTag" style="width:100%;max-width:80%;max-height:350px"></canvas>
+      <div class="backgroundColor">
+        <h2>Anzahl Bewässerungen pro Tag</h2>
+        <canvas id="proTag"></canvas>
+      </div>
       <p>Hier siehst du wie oft deine Pflanzen pro Tag gegossen werden. Je höher die Zahl, desto öfters wurden die
         Pflanzen gegossen. Das passiert, wenn es sehr warm in deinem Gewächshaus ist. Dann können die Pflanzen viel
         Wasser gebrauchen und das ist ein gutes Zeichen! Deine Pflanzen haben es wohlig warm und können so fleissig
@@ -24,7 +28,10 @@
         Gewächshaus nachdenken, damit deine Pflanzen auch ordentlich Energie tanken können.</p>
     </div>
     <div class="inML">
-      <canvas id="inML" style="width:100%;max-width:80%;max-height:350px"></canvas>
+      <div class="backgroundColor">
+        <h2>Bewässerung in Milliliter (ml)</h2>
+        <canvas id="inML"></canvas>
+      </div>
       <p>Hier geht es um die Wassermenge. Wie viel deine Pflanzen an Wasser verbraucht haben. Waren sie sehr durstig,
         sieht du höhere Zahlen. Haben sie sich mit weniger Wasser zufrieden gegeben, sieht du niedrigere Zahlen.
         Keine Angst, gewisse Schwankungen sind ganz normal. Wenn die Pflanzen nicht so viel Wasser brauchen heisst das
@@ -34,8 +41,16 @@
       </p>
     </div>
     <div class="fuellstand">
-      <canvas id="fuellstand" style="width:100%;max-width:80%;max-height:350px"></canvas>
-      <p>Das Wasserreservoir hält das Wasser für die Pflanzen bereit. Damit diese immer genug Wasser haben, muss das
+      <div class="backgroundColor">
+        <div class="flexfuellstand">
+        <h2>Füllstand des Reservoirs</h2>
+        <div id="AlarmFuellstand">
+          <img id="AlarmImg" src="/img/on.png" alt="AlarmFuellstand"/>
+          </div>
+        </div>
+        <canvas id="fuellstand"></canvas>
+      </div>
+      <p id="AlarmText">Das Wasserreservoir hält das Wasser für die Pflanzen bereit. Damit diese immer genug Wasser haben, muss das
         Reservoir einen genug hohen Wasserstand vorweisen. Wenn der Wasserstand unter die rote Linie fällt, musst du das
         Reservoir unbedingt wieder auffüllen. Denke daran das Reservoir vor einem Urlaub oder wenn du längere Zeit von
         zuhause weg bist, nochmals bis zur Markierung am Reservoir aufzufüllen. So haben deine Pflanzen sicher genug
@@ -43,121 +58,195 @@
     </div>
     <div class="switch">
       <div class="flexswitch">
-      <div><h2>Automatische Bewässerung</h2></div>
-      <button id="toggleButton">
-          <img id="toggleImage" src="/img/on.png" alt="Toggle Button" width="auto"/>
-      </button></div>
-      <p id="statusText">Die automatische Bewässerung lauft wie geschmiert! Du musst nur den Füllstand im Auge behalten
+        <div>
+          <h2>Automatische Bewässerung</h2>
+        </div>
+        <button id="toggleButton">
+          <img id="toggleImage" src="/img/on.png" alt="Toggle Button"/>
+        </button>
+      </div>
+      <p id="StatusText">Die automatische Bewässerung lauft wie geschmiert! Du musst nur den Füllstand im Auge behalten
         und das Wasser bei Bedarf nachfüllen.
         Giese deine Pflanzen auf keinen Fall von Hand. Zu viel Wasser kann deinen Pflanzen schaden!</p>
     </div>
+  </div>
 
-    <footer>
-      <div class="footer-row dark-bg">
-        <div class="footer-column">
-          <h3>Impressum</h3>
-        </div>
-        <div class="footer-column">
-          <h3>Über uns</h3>
-        </div>
-        <div class="footer-column">
-          <h3>Hilfe</h3>
-        </div>
+  <footer>
+    <div class="footer-row dark-bg">
+      <div class="footer-column">
+        <h3>Impressum</h3>
       </div>
+      <div class="footer-column">
+        <h3>Über uns</h3>
+      </div>
+      <div class="footer-column">
+        <h3>Hilfe</h3>
+      </div>
+    </div>
 
-      <div class="footer-row light-bg">
-        <div class="footer-column">
-          <ul>
-            <li>Datenschutz</li>
-            <li>AGB</li>
-            <li>Kontakt</li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <ul>
-            <li>Kontakt</li>
-            <li>Unternehmen</li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <ul>
-            <li>Häufige Fragen</li>
-            <li>AGB</li>
-            <li>Garantie & Reparaturen</li>
-          </ul>
-        </div>
+    <div class="footer-row light-bg">
+      <div class="footer-column">
+        <ul>
+          <li>Grüner Daumen <i>KIDS</i></li>
+          <li>Bundesplatz 3</li>
+          <li>3003 Bern</li>
+        </ul>
       </div>
-    </footer>
+      <div class="footer-column">
+        <ul>
+          <li>Kontakt</li>
+          <li>Unternehmen</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li>Häufige Fragen</li>
+          <li>AGB</li>
+          <li>Garantie & Reparaturen</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
-<script>
-  const ctxProTag = document.getElementById("proTag").getContext("2d");
+<!-- Neu: Chart.js 4.x und Annotation Plugin -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 
-  const chartProTag = new Chart(ctxProTag, {
+<script>
+  // Plugin registrieren
+  Chart.register(window['chartjs-plugin-annotation']);
+
+  const sharedOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: {
+          color: "#333",
+          font: {
+            size: 18
+          }
+        }
+      },
+      y: {
+        grid: { display: false },
+        beginAtZero: true
+      }
+    }
+  };
+
+  // Chart 1: Bewässerungen pro Tag
+  new Chart(document.getElementById("proTag"), {
     type: "bar",
     data: {
       labels: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
       datasets: [{
         label: "Bewässerungen pro Tag",
         data: [3, 2, 4, 2, 2, 3, 4],
-        backgroundColor: "#628068"
+        backgroundColor: "#628068",
+        borderRadius: 5
       }]
     },
     options: {
-      responsive: true,
+      ...sharedOptions,
       scales: {
+        ...sharedOptions.scales,
         y: {
-          beginAtZero: true
+          ...sharedOptions.scales.y,
+          ticks: {
+            stepSize: 1,
+            font: {
+              size: 18
+            },
+            padding: 10
+          }
         }
       }
     }
   });
-</script>
 
-<script>
-  const ctxInML = document.getElementById("inML").getContext("2d");
-
-  const chartInML = new Chart(ctxInML, {
+  // Chart 2: Bewässerungen in ML
+  new Chart(document.getElementById("inML"), {
     type: "bar",
     data: {
       labels: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
       datasets: [{
-        label: "Bewässerungen in Milliliter",
-        data: [3, 2, 4, 2, 2, 3, 4],
-        backgroundColor: "#628068"
+        label: "Bewässerung in Milliliter",
+        data: [10, 18, 7, 25, 9, 12, 29],
+        backgroundColor: "#628068",
+        borderRadius: 5
       }]
     },
     options: {
-      responsive: true,
+      ...sharedOptions,
       scales: {
+        ...sharedOptions.scales,
         y: {
-          beginAtZero: true
+          ...sharedOptions.scales.y,
+          ticks: {
+            stepSize: 5,
+            font: {
+              size: 18
+            },
+            padding: 10
+          }
         }
       }
     }
   });
-</script>
 
-<script>
-  const ctxFuellstand = document.getElementById("fuellstand").getContext("2d");
-
-  const chartFuellstand = new Chart(ctxFuellstand, {
+  // Chart 3: Füllstand mit Mindestwert-Linie
+  new Chart(document.getElementById("fuellstand"), {
     type: "bar",
     data: {
       labels: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
       datasets: [{
         label: "Füllstand des Reservoirs",
-        data: [3, 2, 4, 2, 2, 3, 4],
-        backgroundColor: "#628068"
+        data: [3, 2, 1, 6, 4, 3, 4],
+        backgroundColor: "#628068",
+        borderRadius: 5
       }]
     },
     options: {
-      responsive: true,
+      ...sharedOptions,
+      plugins: {
+        ...sharedOptions.plugins,
+        annotation: {
+          annotations: {
+            minLine: {
+              type: "line",
+              yMin: 2,
+              yMax: 2,
+              borderColor: "red",
+              borderWidth: 2,
+              label: {
+                content: "Mindestwert",
+                enabled: true,
+                position: "end",
+                backgroundColor: "rgba(255, 0, 0, 0.7)",
+                color: "#fff"
+              }
+            }
+          }
+        }
+      },
       scales: {
+        ...sharedOptions.scales,
         y: {
-          beginAtZero: true
+          ...sharedOptions.scales.y,
+          ticks: {
+            stepSize: 1,
+            font: {
+              size: 18
+            },
+            padding: 10
+          }
         }
       }
     }
@@ -167,7 +256,7 @@
 <script>
   const toggleButton = document.getElementById('toggleButton');
   const toggleImage = document.getElementById('toggleImage');
-  const statusText = document.getElementById('statusText');
+  const statusText = document.getElementById('StatusText');
 
   let isOn = false;
 
@@ -178,6 +267,39 @@
       ? 'Die automatische Bewässerung lauft wie geschmiert! Du musst nur den Füllstand im Auge behalten und das Wasser bei Bedarf nachfüllen. Giese deine Pflanzen auf keinen Fall von Hand. Zu viel Wasser kann deinen Pflanzen schaden!'
       : 'Die automatische Bewässerung ist ausgeschaltet. Jetzt bist du an der Reihe und musst die Pflanzen von Hand begiessen. Achte darauf nicht zu viel und nicht zu wenig Wasser zu geben.';
   });
+</script>
+
+<script>
+const alarmImg = document.getElementById("AlarmImg");
+const alarmText = document.getElementById("AlarmText");
+
+let isAlarmOn = false;
+
+// Beispielgrenzwert
+const MIN_WATER_LEVEL = 20;
+
+// Diese Funktion wird mit den echten Daten aufgerufen:
+function updateWaterLevel(currentLevel) {
+  if (currentLevel < MIN_WATER_LEVEL) {
+    triggerAlarm(true);
+  } else {
+    triggerAlarm(false);
+  }
+}
+
+function triggerAlarm(on) {
+  isAlarmOn = on;
+  alarmImg.src = isAlarmOn ? "/img/on.png" : "/img/off.png";
+  alarmText.innerHTML = isAlarmOn
+    ? `Das Wasserreservoir hält das Wasser für die Pflanzen bereit. Damit diese immer genug Wasser haben, muss das Reservoir einen genug hohen Wasserstand vorweisen. Wenn der Wasserstand unter die rote Linie fällt, musst du das Reservoir unbedingt wieder auffüllen. Denke daran das Reservoir vor einem Urlaub oder wenn du längere Zeit von zuhause weg bist, nochmals bis zur Markierung am Reservoir aufzufüllen. So haben deine Pflanzen sicher genug Wasser.`
+    : `Das Wasserreservoir hält das Wasser für die Pflanzen bereit. Damit diese immer genug Wasser haben, muss das Reservoir einen genug hohen Wasserstand vorweisen. Wenn der Wasserstand unter die rote Linie fällt, musst du das Reservoir unbedingt wieder auffüllen. Denke daran das Reservoir vor einem Urlaub oder wenn du längere Zeit von zuhause weg bist, nochmals bis zur Markierung am Reservoir aufzufüllen. So haben deine Pflanzen sicher genug Wasser. <strong style="color: red;">Dein Reservoir hat nicht mehr genügend Wasser. Fülle es umgehend bis zur Markierung auf.</strong>`;
+}
+
+// Simulierter Daten-Update alle 5 Sekunden:
+setInterval(() => {
+  const simulatedLevel = Math.floor(Math.random() * 50); // z.B. von 0–49%
+  updateWaterLevel(simulatedLevel);
+}, 5000);
 </script>
 
 </html>
